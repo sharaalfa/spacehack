@@ -34,13 +34,13 @@ del change_data['56.2']
 change_data.to_csv('result_google_1and3.csv', index=False)
 
 # подготовка датасета
-dataset = numpy.loadtxt('results_google.csv', delimiter=',')
+dataset = numpy.loadtxt('set.csv', delimiter=',')
 
 
 
 # выделим оклик и фичи для переменных с высоко  корреляцией
-X = dataset[:,0:4]
-Y = dataset[:,4]
+X = dataset[:,0:5]
+Y = dataset[:,5]
 
 # определим обучающую и тестовую выборки
 X_train, X_test, y_train, y_test = \
